@@ -48,4 +48,12 @@
             android:name="com.ldj.navigationarchitecturecomponent.R2_1Fragment"
             android:label="fragment_r2_1"
             tools:layout="@layout/fragment_r2_1"/>
+    <action
+            android:id="@+id/action_global_r2_1Fragment"
+            app:destination="@id/r2_1Fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@+id/rootFragment"
+            app:popEnterAnim="@anim/fragment_slide_in_from_left"
+            app:popExitAnim="@anim/fragment_slide_out_to_right"/>
 </navigation>
