@@ -1,20 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
             app:startDestination="@id/rootFragment">
 
-    <fragment android:id="@+id/rootFragment" android:name="com.ldj.navigationarchitecturecomponent.RootFragment"
-              android:label="fragment_root" tools:layout="@layout/fragment_root">
-        <action android:id="@+id/action_rootFragment_to_r1_1Fragment" app:destination="@id/r1_1Fragment"/>
-        <action android:id="@+id/action_rootFragment_to_r2_1Fragment" app:destination="@id/r2_1Fragment"/>
+    <fragment
+            android:id="@+id/rootFragment"
+            android:name="com.ldj.navigationarchitecturecomponent.RootFragment"
+            android:label="fragment_root"
+            tools:layout="@layout/fragment_root">
+        <action
+                android:id="@+id/action_rootFragment_to_r1_1Fragment"
+                app:destination="@id/r1_1Fragment"
+                app:enterAnim="@anim/fragment_slide_in_from_right"
+                app:exitAnim="@anim/fragment_slide_out_to_left"
+                app:popEnterAnim="@anim/fragment_slide_in_from_left"
+                app:popExitAnim="@anim/fragment_slide_out_to_right"/>
+        <action
+                android:id="@+id/action_rootFragment_to_r2_1Fragment"
+                app:enterAnim="@anim/fragment_slide_in_from_right"
+                app:exitAnim="@anim/fragment_slide_out_to_left"
+                app:popEnterAnim="@anim/fragment_slide_in_from_left"
+                app:popExitAnim="@anim/fragment_slide_out_to_right"
+                app:destination="@id/r2_1Fragment"/>
     </fragment>
-    <fragment android:id="@+id/r1_1Fragment" android:name="com.ldj.navigationarchitecturecomponent.R1_1Fragment"
-              android:label="fragment_r1_1" tools:layout="@layout/fragment_r1_1">
-        <action android:id="@+id/action_r1_1Fragment_to_r1_2Fragment" app:destination="@id/r1_2Fragment"/>
+    <fragment
+            android:id="@+id/r1_1Fragment"
+            android:name="com.ldj.navigationarchitecturecomponent.R1_1Fragment"
+            android:label="fragment_r1_1"
+            tools:layout="@layout/fragment_r1_1">
+        <action
+                android:id="@+id/action_r1_1Fragment_to_r1_2Fragment"
+                app:enterAnim="@anim/fragment_slide_in_from_right"
+                app:exitAnim="@anim/fragment_slide_out_to_left"
+                app:popEnterAnim="@anim/fragment_slide_in_from_left"
+                app:popExitAnim="@anim/fragment_slide_out_to_right"
+                app:destination="@id/r1_2Fragment"/>
     </fragment>
-    <fragment android:id="@+id/r1_2Fragment" android:name="com.ldj.navigationarchitecturecomponent.R1_2Fragment"
-              android:label="fragment_r1_2" tools:layout="@layout/fragment_r1_2"/>
-    <fragment android:id="@+id/r2_1Fragment" android:name="com.ldj.navigationarchitecturecomponent.R2_1Fragment"
-              android:label="fragment_r2_1" tools:layout="@layout/fragment_r2_1"/>
+    <fragment
+            android:id="@+id/r1_2Fragment"
+            android:name="com.ldj.navigationarchitecturecomponent.R1_2Fragment"
+            android:label="fragment_r1_2"
+            tools:layout="@layout/fragment_r1_2"/>
+    <fragment
+            android:id="@+id/r2_1Fragment"
+            android:name="com.ldj.navigationarchitecturecomponent.R2_1Fragment"
+            android:label="fragment_r2_1"
+            tools:layout="@layout/fragment_r2_1"/>
 </navigation>
