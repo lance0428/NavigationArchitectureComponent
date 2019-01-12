@@ -3,7 +3,7 @@ package com.ldj.navigationarchitecturecomponent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , OnFragmentInteractionListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
